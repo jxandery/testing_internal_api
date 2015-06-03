@@ -37,6 +37,8 @@ class SchoolistServiceTest < ActiveSupport::TestCase
       assert_equal "123", school["uid"]
       assert_equal "12.3", school["overweight_percentage"]
       assert_equal "19.0", school["obese_percentage"]
+
+      service.destroy_school(school[:id])
       end
     end
   end
